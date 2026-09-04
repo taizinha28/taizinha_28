@@ -85,7 +85,7 @@ header nav a:hover {
     padding-bottom: 0.5rem;
 }
 
-/* Conteúdo interno do Card (Layout flex para imagem e texto) */
+/* Conteúdo interno do Card */
 .conteudo-produto {
     display: flex;
     gap: 1.5rem;

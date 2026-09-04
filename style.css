@@ -1,27 +1,160 @@
-h1 {
-    color: rgb(0, 17, 255);
+/* Importação de fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --rosa-principal: #ff6699;
+    --rosa-escuro: #d81b60;
+    --rosa-claro: #ffe4e1;
+    --rosa-fundo: #fff0f5;
+    --texto-cor: #4a4a4a;
+    --brancoe-card: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--rosa-fundo);
+    color: var(--texto-cor);
+    line-height: 1.6;
 }
 
+/* Cabecalho */
 header {
-    border-bottom: 1px solid black;
+    background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #ffb6c1;
 }
 
-footer {
-    border-top: 1px solid black;
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.imagem-produto {
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--rosa-escuro);
+}
+
+/* Layout Principal */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-/* Adicione esta regra logo abaixo */
+/* Estilizacao dos Cards */
+.card {
+    background-color: var(--brancoe-card);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 15px rgba(216, 27, 96, 0.08);
+    border: 1px solid var(--rosa-claro);
+    border-left: 6px solid var(--rosa-principal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(216, 27, 96, 0.15);
+}
+
+.card h2 {
+    color: var(--rosa-escuro);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 2px dashed var(--rosa-claro);
+    padding-bottom: 0.5rem;
+}
+
+.card h3 {
+    color: var(--rosa-principal);
+    margin: 1.2rem 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+/* Ajustes de Imagem e Layout do Card */
+.conteudo-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .conteudo-produto {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
 .conteudo-produto img {
-    max-width: 300px;
-    width: 100%;
+    max-width: 100%;
+    width: 250px;
     height: auto;
+    border-radius: 10px;
+    border: 3px solid var(--rosa-claro);
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Estilizacao do Texto e Listas */
+.texto p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Icone enfeitado na lista */
+ul li::before {
+    content: "🌸";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9rem;
+}
+
+ul li strong {
+    color: var(--rosa-escuro);
+}
+
+/* Rodape */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--rosa-claro);
+    color: var(--rosa-escuro);
+    font-weight: 600;
+    margin-top: 3rem;
+    border-top: 2px solid var(--rosa-principal);
 }

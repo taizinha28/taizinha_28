@@ -1,156 +1,27 @@
-/* Variáveis de Cores e Estilos Globais */
-:root {
-    --primary-color: #4f46e5;
-    --primary-dark: #4338ca;
-    --bg-color: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --border-color: #e2e8f0;
-    --radius: 12px;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1 {
+    color: rgb(0, 17, 255);
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.6;
+    background-color: aliceblue;
 }
 
-/* Cabeçalho */
 header {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: #ffffff;
-    padding: 2rem 1rem;
-    text-align: center;
-    box-shadow: var(--shadow);
+    border-bottom: 1px solid black;
 }
 
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    transition: background 0.3s ease;
-}
-
-header nav a:hover {
-    background: rgba(255, 255, 255, 0.25);
-}
-
-/* Estrutura Principal */
-.container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-/* Cards dos Projetos */
-.card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.card h2 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.5rem;
-}
-
-/* Conteúdo interno do Card */
-.conteudo-produto {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-}
-
-.conteudo-produto img {
-    width: 220px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    flex-shrink: 0;
-}
-
-.texto {
-    flex: 1;
-}
-
-.texto p {
-    margin-bottom: 1rem;
-    color: var(--text-main);
-}
-
-.texto h3 {
-    font-size: 1.1rem;
-    color: var(--text-main);
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.texto ul {
-    margin-left: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.texto li {
-    margin-bottom: 0.4rem;
-    color: var(--text-muted);
-}
-
-.texto strong {
-    color: var(--text-main);
-}
-
-/* Rodapé */
 footer {
-    text-align: center;
-    padding: 2rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    border-top: 1px solid var(--border-color);
-    margin-top: 3rem;
+    border-top: 1px solid black;
 }
 
-/* Responsividade para Telas Menores (Celulares) */
-@media (max-width: 768px) {
-    .conteudo-produto {
-        flex-direction: column;
-        align-items: center;
-    }
+.imagem-produto {
+    display: flex;
+    align-items: center;
+}
 
-    .conteudo-produto img {
-        width: 100%;
-        height: auto;
-        max-height: 250px;
-    }
+/* Adicione esta regra logo abaixo */
+.conteudo-produto img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
 }
